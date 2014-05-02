@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenLib.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:OpenLib.Extensions.EnumExtensions">
+            <summary>
+            The <c>EnumExtensions</c> type provides extension methods for
+            enumerations.
+            </summary>
+        </member>
+        <member name="M:OpenLib.Extensions.EnumExtensions.ToEnum``1(System.Enum)">
+            <summary>
+            Converts the current enumeration to the specified enumeration type.
+            </summary>
+            <typeparam name="T">The type of the enumeration to convert to.</typeparam>
+            <param name="enumeration">The current enumeration in which to convert.</param>
+            <returns>The converted enumeration type.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.EnumExtensions.ToInt32(System.Enum)">
+            <summary>
+            Converts the current enumeration to its 32-bit integer value.
+            </summary>
+            <param name="enumeration">The current enumeration in which to convert.</param>
+            <returns>The 32-bit integer value of the enumeration.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.EnumExtensions.ToStringValue(System.Enum)">
+            <summary>
+            Converts the current enumeration to its string value.
+            </summary>
+            <param name="enumeration">The current enumeration in which to convert.</param>
+            <returns>The string value of the enumeration.</returns>
+        </member>
+        <member name="T:OpenLib.Extensions.Int32Extensions">
+            <summary>
+            The <c>Int32Extensions</c> type provides extension methods for 32-bit
+            integers.
+            </summary>
+        </member>
+        <member name="M:OpenLib.Extensions.Int32Extensions.ToEnum``1(System.Int32)">
+            <summary>
+            Converts the current 32-bit integer value to its enumeration
+            equivalent.
+            </summary>
+            <param name="value">The current 32-bit integer value in which to convert.</param>
+            <returns>The enumeration equivalent of the 32-bit integer value.</returns>
+        </member>
+        <member name="T:OpenLib.Extensions.LambdaExtensions">
+            <summary>
+            The <c>LambdaExtensions</c> type provides extension methods for
+            common Lambda expressions.
+            </summary>
+        </member>
+        <member name="M:OpenLib.Extensions.LambdaExtensions.SetPropertyValue``1(``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Object)">
+            <summary>
+            Sets the specified property using a Lambda expression with the
+            specified value.
+            </summary>
+            <typeparam name="T">Type of the target object's property to set.</typeparam>
+            <param name="target">The target object containing the property to set.</param>
+            <param name="exp">A Lambda expression that identifies the property to set on the target object.</param>
+            <param name="value">The value in which to set on the target object's property.</param>
+        </member>
+        <member name="T:OpenLib.Extensions.ObjectExtensions">
+            <summary>
+            The <c>ObjectExtensions</c> type provides extension methods for objects.
+            </summary>
+        </member>
+        <member name="M:OpenLib.Extensions.ObjectExtensions.ToXml(System.Object)">
+            <summary>
+            Converts the specified object to an XML string representation.
+            </summary>
+            <param name="o">The object to convert to XML.</param>
+            <returns>An XML string representation of the object.</returns>
+        </member>
+        <member name="T:OpenLib.Extensions.StringExtensions">
+            <summary>
+            The <c>StringExtensions</c> type provides extension methods for strings.
+            </summary>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.CompareNoCase(System.String,System.String)">
+            <summary>
+            Compares two string objects ignoring case.
+            </summary>
+            <param name="valueCurrent">The current string used to compare against another string.</param>
+            <param name="valueToCompare">The string to compare against the current string.</param>
+            <returns>A value indicating if the strings are equal.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ContainedIn(System.String,System.Object[])">
+            <summary>
+            Determines if the current string is contained in the specified array
+            of objects.
+            </summary>
+            <param name="valueCurrent">The current string used to compare against the array of objects.</param>
+            <param name="values">The array of objects used compare against the current string.</param>
+            <returns>A value indicating if the string is contained in the array of objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ContainedIn(System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Determines if the current string is contained in the specified list
+            of objects.
+            </summary>
+            <param name="valueCurrent">The current string used to compare against the list of objects.</param>
+            <param name="values">The list of objects used compare against the current string.</param>
+            <returns>A value indicating if the string is contained in the list of objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ContainedIn(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Determines if the current string is contained in the specified list
+            of strings.
+            </summary>
+            <param name="valueCurrent">The current string used to compare against the list of strings.</param>
+            <param name="values">The list of strings used compare against the current string.</param>
+            <returns>A value indicating if the string is contained in the list of strings.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.EndsWithCurrent(System.String,System.String)">
+            <summary>
+            Gets a value indicating if the string ends with the specified
+            substring for the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to compare against a substring.</param>
+            <param name="valueToCompare">The substring to compare against the current string.</param>
+            <returns>A value indicating if the string ends with the specified substring.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.EndsWithOrdinalIgnoreCase(System.String,System.String)">
+            <summary>
+            Gets a value indicating if the string ends with the specified
+            substring for ordinal ignoring case.
+            </summary>
+            <param name="valueCurrent">The current string to compare against a substring.</param>
+            <param name="valueToCompare">The substring to compare against the current string.</param>
+            <returns>A value indicating if the string ends with the specified substring.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatCurrent(System.String,System.Object)">
+            <summary>
+            Formats the string with the specified object for the current
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The object in which to format in the string.</param>
+            <returns>A formatted string with the object.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatCurrent(System.String,System.Object,System.Object)">
+            <summary>
+            Formats the string with the specified objects for the current
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The first object in which to format in the string.</param>
+            <param name="arg1">The second object in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatCurrent(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            Formats the string with the specified objects for the current
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The first object in which to format in the string.</param>
+            <param name="arg1">The second object in which to format in the string.</param>
+            <param name="arg2">The third object in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatCurrent(System.String,System.Object[])">
+            <summary>
+            Formats the string with the specified objects for the current
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="args">An array of objects in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatInvariant(System.String,System.Object)">
+            <summary>
+            Formats the string with the specified object for an invariant
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The object in which to format in the string.</param>
+            <returns>A formatted string with the object.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatInvariant(System.String,System.Object,System.Object)">
+            <summary>
+            Formats the string with the specified objects for an invariant
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The first object in which to format in the string.</param>
+            <param name="arg1">The second object in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatInvariant(System.String,System.Object,System.Object,System.Object)">
+            <summary>
+            Formats the string with the specified objects for an invariant
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="arg0">The first object in which to format in the string.</param>
+            <param name="arg1">The second object in which to format in the string.</param>
+            <param name="arg2">The third object in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FormatInvariant(System.String,System.Object[])">
+            <summary>
+            Formats the string with the specified objects for an invariant
+            culture.
+            </summary>
+            <param name="format">The string to format.</param>
+            <param name="args">An array of objects in which to format in the string.</param>
+            <returns>A formatted string with the objects.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.FromXml``1(System.String)">
+            <summary>
+            Converts the specified string containing XML to the specified type
+            of T.
+            </summary>
+            <typeparam name="T">The type in which to convert from XML.</typeparam>
+            <param name="xml">The string containing the XML to convert.</param>
+            <returns>The converted type of T from XML.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IndexOfAll(System.String,System.String)">
+            <summary>
+            Gets the indexes of all occurrences of the specified value in the
+            string.
+            </summary>
+            <param name="valueCurrent">The current string in which to obtain all indexes of.</param>
+            <param name="value">The value to seek for all occurrences of.</param>
+            <returns>An enumerable containing all the indexes of the occurences of the value sought.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IndexOfCurrent(System.String,System.String)">
+            <summary>
+            Gets the index of the first occurrence of the specified value in
+            the string for the current culture.
+            </summary>
+            <param name="valueCurrent">The current string in which to obtain the index of.</param>
+            <param name="value">The value to seek.</param>
+            <returns>The index of the first occurrence of the specified value in the string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IndexOfCurrent(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the index of the first occurrence of the specified value in
+            the string for the current culture.
+            </summary>
+            <param name="valueCurrent">The current string in which to obtain the index of.</param>
+            <param name="value">The value to seek.</param>
+            <param name="startIndex">The search starting position.</param>
+            <returns>The index of the first occurrence of the specified value in the string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IndexOfOrdinalIgnoreCase(System.String,System.String)">
+            <summary>
+            Gets the index of the first occurrence of the specified value in
+            the string for ordinal ignoring case.
+            </summary>
+            <param name="valueCurrent">The current string in which to obtain the index of.</param>
+            <param name="value">The value to seek.</param>>
+            <returns>The index of the first occurrence of the specified value in the string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IndexOfOrdinalIgnoreCase(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the index of the first occurrence of the specified value in
+            the string for ordinal ignoring case.
+            </summary>
+            <param name="valueCurrent">The current string in which to obtain the index of.</param>
+            <param name="value">The value to seek.</param>
+            <param name="startIndex">The search starting position.</param>
+            <returns>The index of the first occurrence of the specified value in the string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IsEmail(System.String)">
+            <summary>
+            Gets a value indicating if the specified value is an email address.
+            </summary>
+            <param name="valueCurrent">The current string in which to validate.</param>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IsYearOfBirth(System.String)">
+            <summary>
+            Gets a value indicating if the specified value is a year of birth.
+            </summary>
+            <param name="valueCurrent">The current string in which to validate.</param>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.IsZipCode(System.String)">
+            <summary>
+            Gets a value indicating if the specified value is a zip code.
+            </summary>
+            <param name="valueCurrent">The current string in which to validate.</param>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.GetValueOrNull``1(System.String)">
+            <summary>
+            Gets the value of the current string and converts it to type
+            T if the string is not null or empty.
+            </summary>
+            <typeparam name="T">The type in which to convert the string to.</typeparam>
+            <param name="valueCurrent">The current string in which to obtain the value.</param>
+            <returns>A value of type T, if successfully converted, or null.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.Join(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Joins all elements in the specified list together separated
+            by the specified delimiter.
+            </summary>
+            <param name="list">A list of elements.</param>
+            <param name="separator">The separator for each element.</param>
+            <returns>A joined string of all elements separated by a delimiter.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.Join(System.String[],System.String)">
+            <summary>
+            Joins all elements in the specified array together separated
+            by the specified delimiter.
+            </summary>
+            <param name="array">An array of elements.</param>
+            <param name="separator">The separator for each element.</param>
+            <returns>A joined string of all elements separated by a delimiter.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.StartsWithCurrent(System.String,System.String)">
+            <summary>
+            Gets a value indicating if the string begins with the specified
+            substring for the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to compare against a substring.</param>
+            <param name="valueToCompare">The substring to compare against the current string.</param>
+            <returns>A value indicating if the string begins with the specified substring.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.StartsWithOrdinalIgnoreCase(System.String,System.String)">
+            <summary>
+            Gets a value indicating if the string begins with the specified
+            substring for ordinal ignoring case.
+            </summary>
+            <param name="valueCurrent">The current string to compare against a substring.</param>
+            <param name="valueToCompare">The substring to compare against the current string.</param>
+            <returns>A value indicating if the string begins with the specified substring.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            Returns a Boolean converted from the current string.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a Boolean.</param>
+            <returns>A Boolean converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToCamelCaseCurrent(System.String)">
+            <summary>
+            Returns the current string converted to camel case using the casing
+            rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to camel case.</param>
+            <returns>The current string converted to camel case.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToCamelCaseInvariant(System.String)">
+            <summary>
+            Returns the current string converted to camel case using the casing
+            rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to camel case.</param>
+            <returns>The current string converted to camel case.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToDateTimeCurrent(System.String)">
+            <summary>
+            Returns a date/time converted from the current string using the
+            casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a date/time.</param>
+            <returns>A date/time converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToDateTimeInvariant(System.String)">
+            <summary>
+            Returns a date/time converted from the current string using the
+            casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a date/time.</param>
+            <returns>A date/time converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToDecimalCurrent(System.String)">
+            <summary>
+            Returns a decimal converted from the current string using the
+            casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a decimal.</param>
+            <returns>A decimal converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToDecimalInvariant(System.String)">
+            <summary>
+            Returns a decimal converted from the current string using the
+            casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a decimal.</param>
+            <returns>A decimal converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToEnum``1(System.String)">
+            <summary>
+            Converts the current enumerated string to the specified enumeration
+            type.
+            </summary>
+            <typeparam name="T">The type of enumeration to convert to.</typeparam>
+            <param name="enumeration">The current enumerated string in which to convert.</param>
+            <returns>The converted enumeration.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt16Current(System.String)">
+            <summary>
+            Returns a 16-bit integer converted from the current string using
+            the casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 16-bit integer.</param>
+            <returns>A 16-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt16Invariant(System.String)">
+            <summary>
+            Returns a 16-bit integer converted from the current string using
+            the casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 16-bit integer.</param>
+            <returns>A 16-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt32Current(System.String)">
+            <summary>
+            Returns a 32-bit integer converted from the current string using
+            the casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 32-bit integer.</param>
+            <returns>A 32-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt32Invariant(System.String)">
+            <summary>
+            Returns a 32-bit integer converted from the current string using
+            the casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 32-bit integer.</param>
+            <returns>A 32-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt64Current(System.String)">
+            <summary>
+            Returns a 64-bit integer converted from the current string using
+            the casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 64-bit integer.</param>
+            <returns>A 64-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToInt64Invariant(System.String)">
+            <summary>
+            Returns a 64-bit integer converted from the current string using
+            the casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to a 64-bit integer.</param>
+            <returns>A 64-bit integer converted from the current string.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToLowerCurrent(System.String)">
+            <summary>
+            Returns the current string converted to lowercase using the casing
+            rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to lowercase.</param>
+            <returns>The current string converted to lowercase.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToProperCaseCurrent(System.String)">
+            <summary>
+            Returns the current string converted to proper case using the
+            casing rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to proper case.</param>
+            <returns>The current string converted to proper case.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToProperCaseInvariant(System.String)">
+            <summary>
+            Returns the current string converted to proper case using the
+            casing rules of an invariant culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to proper case.</param>
+            <returns>The current string converted to proper case.</returns>
+        </member>
+        <member name="M:OpenLib.Extensions.StringExtensions.ToUpperCurrent(System.String)">
+            <summary>
+            Returns the current string converted to uppercase using the casing
+            rules of the current culture.
+            </summary>
+            <param name="valueCurrent">The current string to convert to uppercase.</param>
+            <returns>Then current string converted to uppercase.</returns>
+        </member>
+    </members>
+</doc>

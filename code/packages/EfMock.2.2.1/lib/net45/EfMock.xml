@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EfMock</name>
+    </assembly>
+    <members>
+        <member name="T:EfMock.GenericDbSet`1">
+            <summary>
+            The <c>GenericDbSet</c> provides an implementation of the
+            <c>IDbSet</c> interface that provides a generic <c>IQueryable</c>
+            and <c>IEnumerable</c> for querying an entity set and getting the
+            next entity in an entity set, respectively.
+            </summary>
+            <typeparam name="T">The type of the entity set.</typeparam>
+        </member>
+        <member name="F:EfMock.GenericDbSet`1.data">
+            <summary>
+            Defines a generic hashset to hold entity sets.
+            </summary>
+        </member>
+        <member name="F:EfMock.GenericDbSet`1.query">
+            <summary>
+            Defines a query to hold queryable items.
+            </summary>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.#ctor">
+            <summary>
+            Creates a new instance of <c>GenericDbSet</c>.
+            </summary>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.#ctor(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32)">
+            <summary>
+            Creates a new instance of <c>GenericDbSet</c>.
+            </summary>
+            <param name="identity">A Lambda expression that defines the identity of the entity set.</param>
+            <param name="identitySeed">Sets the default identity seed value for integer-based identities.</param>
+            <remarks>
+            If the identity expression is set, the identity on each entity will
+            be automatically set based on the identity's type. Supported types
+            include integers and GUIDs. If the identity type is an integer, the
+            identity seed will be incremented automatically for each identity
+            set on an entity.
+            </remarks>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32)">
+            <summary>
+            Creates a new instance of <c>GenericDbSet</c>.
+            </summary>
+            <param name="data">Enumerable containing an entity set to store.</param>
+            <param name="identity">A Lambda expression that defines the identity of the entity set.</param>
+            <param name="identitySeed">Sets the default identity seed value for integer-based identities.</param>
+            <remarks>
+            If the identity expression is set, the identity on each entity will
+            be automatically set based on the identity's type. Supported types
+            include integers and GUIDs. If the identity type is an integer, the
+            identity seed will be incremented automatically for each identity
+            set on an entity.
+            </remarks>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.ExtractIdentity(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.Int32)">
+            <summary>
+            Extracts the identity information from the specified Lambda
+            expression and identity seed.
+            </summary>
+            <param name="identity">A Lambda expression that defines the identity of the entity set.</param>
+            <param name="identitySeed">Sets the default identity seed value for integer-based identities.</param>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.SetIdentity(`0)">
+            <summary>
+            Sets the identity value for the specified entity.
+            </summary>
+            <param name="entity">The entity in which to set the identity value on.</param>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.GetEnumerator">
+            <summary>
+            Gets an enumerator that iterates through the entity set.
+            </summary>
+            <returns>An enumerator that iterates through the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets an enumerator that iterates through the entity set.
+            </summary>
+            <returns>An enumerator that iterates through the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.GetNextEntity">
+            <summary>
+            Gets the next entity in the entity set.
+            </summary>
+            <returns>The next entity in the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Find(System.Object[])">
+            <summary>
+            Finds the specified entity in the entity set.
+            </summary>
+            <param name="keyValues">An array of object key values.</param>
+            <remarks>
+            No implementation is provided for this method at this time.
+            </remarks>
+            <returns>The entity from the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Add(`0)">
+            <summary>
+            Adds the specified entity to the entity set.
+            </summary>
+            <param name="entity">The entity to add to the entity set.</param>
+            <returns>The entity added to the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Attach(`0)">
+            <summary>
+            Attaches the specified entity to the entity set.
+            </summary>
+            <param name="entity">The entity to attach to the entity set.</param>
+            <returns>The entity attached to the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Create``1">
+            <summary>
+            Creates an instance of a derived entity for the entity set.
+            </summary>
+            <typeparam name="TDerivedEntity">The type of the derived entity.</typeparam>
+            <remarks>
+            No implementation is provided for this method at this time.
+            </remarks>
+            <returns>The newly created instance of the derived entity.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Create">
+            <summary>
+            Creates an instance of an entity for the entity set.
+            </summary>
+            <returns>The newly created instance of the entity.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Remove(`0)">
+            <summary>
+            Removes the specified entity from the entity set.
+            </summary>
+            <param name="entity">The entity to remove from the entity set.</param>
+            <returns>The entity removed from the entity set.</returns>
+        </member>
+        <member name="M:EfMock.GenericDbSet`1.Dispose">
+            <summary>
+            Disposes of all resources for this object instance.
+            </summary>
+        </member>
+        <member name="P:EfMock.GenericDbSet`1.Count">
+            <summary>
+            Gets the number of entities contained in the entity set.
+            </summary>
+        </member>
+        <member name="P:EfMock.GenericDbSet`1.Local">
+            <summary>
+            Gets an observable collection containing the entity set.
+            </summary>
+        </member>
+        <member name="P:EfMock.GenericDbSet`1.ElementType">
+            <summary>
+            Gets the type of the element returned when a query is executed.
+            </summary>
+        </member>
+        <member name="P:EfMock.GenericDbSet`1.Expression">
+            <summary>
+            Gets the expression tree associated to a query.
+            </summary>
+        </member>
+        <member name="P:EfMock.GenericDbSet`1.Provider">
+            <summary>
+            Gets the query provider associated with a data source.
+            </summary>
+        </member>
+    </members>
+</doc>

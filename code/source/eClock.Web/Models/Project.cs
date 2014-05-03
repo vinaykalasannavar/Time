@@ -23,5 +23,7 @@ namespace eClock.Web.Models
         public ProjectState State { get; set; }
 
         public virtual ICollection<Module> Modules { get; set; }
+
+        public virtual ICollection<WorkItem> WorkItems { get; set; }
     }
 }

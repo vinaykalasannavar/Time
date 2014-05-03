@@ -172,6 +172,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\WorkItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,14 +192,26 @@
     <Compile Include="Migrations\201405010650076_RenameModuleProjectIdFK.Designer.cs">
       <DependentUpon>201405010650076_RenameModuleProjectIdFK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405031233427_Added_FKRelations.cs" />
+    <Compile Include="Migrations\201405031233427_Added_FKRelations.Designer.cs">
+      <DependentUpon>201405031233427_Added_FKRelations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\eClockWebContext.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeWeek.cs" />
+    <Compile Include="Models\EmployeeWeekState.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectState.cs" />
+    <Compile Include="Models\TimeRegistration.cs" />
+    <Compile Include="Models\Week.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -263,6 +276,11 @@
     <Content Include="Views\Project\_ProjectModulesList.cshtml" />
     <Content Include="Views\Project\_ProjectModulesEditableList.cshtml" />
     <Content Include="Views\Project\_NewModuleRow.cshtml" />
+    <Content Include="Views\WorkItem\Create.cshtml" />
+    <Content Include="Views\WorkItem\Delete.cshtml" />
+    <Content Include="Views\WorkItem\Details.cshtml" />
+    <Content Include="Views\WorkItem\Edit.cshtml" />
+    <Content Include="Views\WorkItem\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405010650076_RenameModuleProjectIdFK.resx">
       <DependentUpon>201405010650076_RenameModuleProjectIdFK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405031233427_Added_FKRelations.resx">
+      <DependentUpon>201405031233427_Added_FKRelations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

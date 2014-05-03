@@ -15,5 +15,7 @@ namespace eClock.Web.Models
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
         public Project Project { get; set; }
+
+        //public virtual ICollection<TimeRegistration> TimeRegistrations { get; set; }
     }
 }

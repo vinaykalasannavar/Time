@@ -156,27 +156,26 @@ namespace eClock.Web.Controllers
         }
 
         // POST: /Project/DeleteModule/5
-        [HttpPost, ActionName("DeleteModule")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteModuleConfirmed(int moduleId)
+        [HttpPost/*, ActionName("DeleteModule")*/]
+        public ActionResult DeleteModule(int moduleId)
         {
             JsonResult returnValue;
-            bool noReferencesToModuleExist = db.Modules.Any(m => m.Id == moduleId);
+            //bool moduleHasTimeRegistrations = db.TimeRegistrations.Any(t => t.ModuleId == moduleId);
             var module = db.Modules.Find(moduleId);
-            if (noReferencesToModuleExist)
+            //if (!moduleHasTimeRegistrations)
             {
                 db.Modules.Remove(module);
                 db.SaveChanges();
                 returnValue = Json(new { Success = true });
             }
-            else
-            {
-                returnValue = Json(new
-                {
-                    Error = string.Format(
-                        "Can't delete module {0}, people have logged time against it.", module.Name)
-                });
-            }
+            //else
+            //{
+            //    returnValue = Json(new
+            //    {
+            //        Error = string.Format(
+            //            "Can't delete module {0}, people have logged time against it.", module.Name)
+            //    });
+            //}
 
             return returnValue;
         }

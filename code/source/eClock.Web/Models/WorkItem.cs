@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -10,5 +11,9 @@ namespace eClock.Web.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+
+        [ForeignKey("Project")]
+        public int ProjectId { get; set; }
+        public virtual Project Project { get; set; }
     }
 }

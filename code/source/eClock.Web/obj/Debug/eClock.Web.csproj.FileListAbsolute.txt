@@ -119,3 +119,15 @@ D:\Dev\eClockRepo\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.AddedMo
 D:\Dev\eClockRepo\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.CorrectedModulesFK.resources
 D:\Dev\eClockRepo\code\source\eClock.Web\obj\Debug\eClock.Web.csprojResolveAssemblyReference.cache
 D:\Dev\eClockRepo\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.RenameModuleProjectIdFK.resources
+D:\Dev\eClock\code\source\eClock.Web\bin\EfMock.dll
+D:\Dev\eClock\code\source\eClock.Web\bin\Microsoft.UnitTestFramework.Extensions.dll
+D:\Dev\eClock\code\source\eClock.Web\bin\OpenLib.Extensions.dll
+D:\Dev\eClock\code\source\eClock.Web\bin\EfMock.xml
+D:\Dev\eClock\code\source\eClock.Web\bin\Microsoft.UnitTestFramework.Extensions.xml
+D:\Dev\eClock\code\source\eClock.Web\bin\OpenLib.Extensions.xml
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.InitialCreate.resources
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.AddedModule.resources
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.CorrectedModulesFK.resources
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.RenameModuleProjectIdFK.resources
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.csproj.GenerateResource.Cache
+D:\Dev\eClock\code\source\eClock.Web\obj\Debug\eClock.Web.Migrations.Added_FKRelations.resources

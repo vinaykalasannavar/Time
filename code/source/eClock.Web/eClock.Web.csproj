@@ -196,6 +196,10 @@
     <Compile Include="Migrations\201405031233427_Added_FKRelations.Designer.cs">
       <DependentUpon>201405031233427_Added_FKRelations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201405031329181_AddModuleFkToTimeReg.cs" />
+    <Compile Include="Migrations\201405031329181_AddModuleFkToTimeReg.Designer.cs">
+      <DependentUpon>201405031329181_AddModuleFkToTimeReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\eClockWebContext.cs" />
@@ -308,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405031233427_Added_FKRelations.resx">
       <DependentUpon>201405031233427_Added_FKRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405031329181_AddModuleFkToTimeReg.resx">
+      <DependentUpon>201405031329181_AddModuleFkToTimeReg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

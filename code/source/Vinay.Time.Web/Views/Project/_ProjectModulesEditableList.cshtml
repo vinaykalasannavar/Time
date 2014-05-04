@@ -1,0 +1,32 @@
+﻿@model Vinay.Time.Web.Models.Project
+
+<table class="table">
+    <tr>
+        <th>
+            Modules
+        </th>
+    </tr>
+    @foreach (var item in Model.Modules)
+    {
+    <tr>
+        <td>
+            <input data-type="module-entry" type="text" data-module-id="@item.Id" value="@item.Name" />
+        </td>
+    </tr>
+    }
+    @Html.Partial("_NewModuleRow")
+
+</table>
+
+<script type="text/javascript">
+    $(function () {
+        var context = {
+            projectId: '@Model.Id',
+            newModuleRowUrl: '@Url.Action("NewModuleRow", "Project")',
+            saveModuleUrl: '@Url.Action("SaveModule", "Project")',
+            deleteModuleUrl: '@Url.Action("DeleteModule", "Project")',
+            moduleInputsSelector: 'input[data-type="module-entry"]'
+        };
+        $.Vinay.Time.projects.registerModuleInputs(context);
+    });
+</script>

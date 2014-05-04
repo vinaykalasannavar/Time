@@ -13,10 +13,10 @@ namespace eClock.Web.Models
         [ForeignKey("WorkItem")]
         public int WorkItemId { get; set; }
         public virtual WorkItem WorkItem { get; set; }
-                
-        //[ForeignKey("Module")]
-        //public int ModuleId { get; set; }
-        //public virtual Module Module { get; set; }
+
+        [ForeignKey("Module")]
+        public int ModuleId { get; set; }
+        public virtual Module Module { get; set; }
         
         [ForeignKey("EmployeeWeek")]
         public int EmployeeWeekId { get; set; }

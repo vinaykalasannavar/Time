@@ -205,6 +205,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeWeek.cs" />
+    <Compile Include="Models\EmployeeWeekSelectionViewModel.cs" />
     <Compile Include="Models\EmployeeWeekState.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -231,7 +232,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\Vinay.Time\Vinay.Time.projects.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -242,6 +242,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\time\vinay.time.projects.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -291,6 +292,7 @@
     <Content Include="Views\TimeRegistration\Details.cshtml" />
     <Content Include="Views\TimeRegistration\Edit.cshtml" />
     <Content Include="Views\TimeRegistration\Index.cshtml" />
+    <Content Include="Views\TimeRegistration\TimeRegistrationGrid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -45,8 +45,6 @@
         <div class="form-group">
             @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.DropDownList(model => model.State)
-    @Html.DropDownListFor(model => model.State, new SelectList(Enum.GetValues(typeof(MyNamespace.Enums.States))))*@
                 @Html.DropDownListFor(model => model.State, new SelectList(Enum.GetValues(typeof(Vinay.Time.Web.Models.ProjectState))))
                 @Html.ValidationMessageFor(model => model.State)
             </div>

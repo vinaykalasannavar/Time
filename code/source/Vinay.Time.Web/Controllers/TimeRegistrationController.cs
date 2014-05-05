@@ -18,10 +18,32 @@ namespace Vinay.Time.Web.Controllers
         // GET: /TimeRegistration/
         public ActionResult Index()
         {
-            TestMethod();
+            //TestMethod();
+            EmployeeWeekSelectionViewModel weekSelectionVM = new EmployeeWeekSelectionViewModel();
+            weekSelectionVM.Employees = db.Employees.ToList();
+            weekSelectionVM.Years = YearsList();
+            return View(weekSelectionVM);
 
-            var timeregistrations = db.TimeRegistrations.Include(t => t.EmployeeWeek).Include(t => t.Module).Include(t => t.WorkItem);
-            return View(timeregistrations.ToList());
+            //var timeregistrations = db.TimeRegistrations.Include(t => t.EmployeeWeek).Include(t => t.Module).Include(t => t.WorkItem);
+            //return View(timeregistrations.ToList());
+        }
+
+        private IEnumerable<int> YearsList()
+        {
+            List<int> years = new List<int>();
+            string yearsConfigString = System.Configuration.ConfigurationManager.AppSettings["TimeRegYearRange"];
+            if (yearsConfigString != null)
+            {
+                var yearsArray = yearsConfigString.Split('-');
+                int startYear = Convert.ToInt32(yearsArray[0]);
+                int endYear = Convert.ToInt32(yearsArray[1]);
+                for (int year = startYear; year < endYear; year++)
+                {
+                    years.Add(year);
+                }
+            }
+
+            return years;
         }
 
         // GET: /TimeRegistration/Details/5
@@ -136,15 +158,8 @@ namespace Vinay.Time.Web.Controllers
             DateTimeFormatInfo dfi = DateTimeFormatInfo.CurrentInfo;
             int weekNo;
             DateTime date = new DateTime(2014, 01, 05);
+            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstFullWeek, DayOfWeek.Monday);
 
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-
-            date = new DateTime(2013, 12, 31);
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            weekNo = dfi.Calendar.GetWeekOfYear(date, System.Globalization.CalendarWeekRule.FirstDay, DayOfWeek.Monday);
 
         }
 

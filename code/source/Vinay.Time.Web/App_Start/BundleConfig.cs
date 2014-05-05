@@ -28,8 +28,8 @@ namespace Vinay.Time.Web
                       "~/Content/site.css"));
 
             //Vinay.Time related bundles.
-            bundles.Add(new ScriptBundle("~/bundles/Vinay.Time").Include(
-                      "~/Scripts/Vinay.Time/Vinay.Time.projects.js"));
+            bundles.Add(new ScriptBundle("~/bundles/vinay.time").Include(
+                      "~/Scripts/time/vinay.time.projects.js"));
 
         }
     }

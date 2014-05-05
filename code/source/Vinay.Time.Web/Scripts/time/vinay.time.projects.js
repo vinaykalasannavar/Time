@@ -1,11 +1,12 @@
 ﻿$(function () {
-    if ($.Vinay.Time === undefined) { $.Vinay.Time = {}; }
-    if ($.Vinay.Time.projects === undefined) { $.Vinay.Time.projects = {}; }
+    if ($.vinay === undefined) { $.vinay = {}; }
+    if ($.vinay.time === undefined) { $.vinay.time = {}; }
+    if ($.vinay.time.projects === undefined) { $.vinay.time.projects = {}; }
 
-    $.Vinay.Time.projects = {
+    $.vinay.time.projects = {
         registerModuleInputs: function (context) {
-            $.Vinay.Time.projects.rebindNewModuleInputsInsert(context);
-            $.Vinay.Time.projects.rebindModuleInputsChange(context);
+            $.vinay.time.projects.rebindNewModuleInputsInsert(context);
+            $.vinay.time.projects.rebindModuleInputsChange(context);
         },
         rebindNewModuleInputsInsert: function (context) {
             var moduleInputs = $(context.moduleInputsSelector);
@@ -24,7 +25,7 @@
                         var parentTr = currentInput.closest('tr');
                         var newRow = $(data);
                         newRow.insertAfter(parentTr);
-                        $.Vinay.Time.projects.rebindNewModuleInputsInsert(context);
+                        $.vinay.time.projects.rebindNewModuleInputsInsert(context);
                     });
                 }
             });

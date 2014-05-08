@@ -66,3 +66,4 @@ D:\Dev\Time\code\source\Vinay.Time.Web\obj\Debug\Vinay.Time.Web.Migrations.AddMo
 D:\Dev\Time\code\source\Vinay.Time.Web\obj\Debug\Vinay.Time.Web.csproj.GenerateResource.Cache
 D:\Dev\Time\code\source\Vinay.Time.Web\obj\Debug\Vinay.Time.Web.dll
 D:\Dev\Time\code\source\Vinay.Time.Web\obj\Debug\Vinay.Time.Web.pdb
+D:\Dev\Time\code\source\Vinay.Time.Web\obj\Debug\Vinay.Time.Web.Migrations.PendingChanges.resources

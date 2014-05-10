@@ -170,6 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Models\EmployeeViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\TimeRegistrationController.cs" />
@@ -204,6 +205,10 @@
     <Compile Include="Migrations\201405070657039_PendingChanges.cs" />
     <Compile Include="Migrations\201405070657039_PendingChanges.Designer.cs">
       <DependentUpon>201405070657039_PendingChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201405080648361_AddedUserIdToEmployee.cs" />
+    <Compile Include="Migrations\201405080648361_AddedUserIdToEmployee.Designer.cs">
+      <DependentUpon>201405080648361_AddedUserIdToEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -297,6 +302,7 @@
     <Content Include="Views\TimeRegistration\Edit.cshtml" />
     <Content Include="Views\TimeRegistration\Index.cshtml" />
     <Content Include="Views\TimeRegistration\TimeRegistrationGrid.cshtml" />
+    <Content Include="Views\Employee\_CreateEditFields.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201405070657039_PendingChanges.resx">
       <DependentUpon>201405070657039_PendingChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201405080648361_AddedUserIdToEmployee.resx">
+      <DependentUpon>201405080648361_AddedUserIdToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,8 +20,17 @@
     </div>
 
     <div class="form-group">
-        @*@Html.LabelFor(model => model.Years, new { @class = "control-label col-md-2" })*@
         <label class="control-label col-md-2" for="Years">Week/Year</label>
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.Week.Number, new SelectList(Model.Weeks))
+            @Html.DropDownListFor(model => model.Week.Year, new SelectList(Model.Years))
+            @*@Html.ValidationMessageFor(model => model.Years)*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Week.StartDate, new { @class = "control-label col-md-2" })
+        @*<label class="control-label col-md-2" for="Years">Week/Year</label>*@
         <div class="col-md-10">
             @Html.EditorFor(model => model.Week.StartDate)
             @*@Html.DropDownListFor(model => model.Week.Year, new SelectList(Model.Years))*@
@@ -30,8 +39,7 @@
     </div>
 
     <div class="form-group">
-        @*@Html.LabelFor(model => model.Years, new { @class = "control-label col-md-2" })*@
-        <label class="control-label col-md-2" for="Years">Week/Year</label>
+        @Html.LabelFor(model => model.Week.EndDate, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Week.EndDate)
             @*@Html.ValidationMessageFor(model => model.Years)*@
@@ -39,22 +47,17 @@
     </div>
 
     <div class="form-group">
-        @*@Html.LabelFor(model => model.Years, new { @class = "control-label col-md-2" })*@
-        <label class="control-label col-md-2" for="Years">Week/Year</label>
+        @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model=>model.State)
-            @*@Html.ValidationMessageFor(model => model.Years)*@
-        </div>
-    </div>
-
-    <div class="form-group">
-        @*@Html.LabelFor(model => model.Years, new { @class = "control-label col-md-2" })*@
-        <label class="control-label col-md-2" for="Years">Week/Year</label>
-        <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Week.Number, new SelectList(Model.Weeks))
-            @Html.DropDownListFor(model => model.Week.Year, new SelectList(Model.Years))
+            @Html.DropDownListFor(model => model.State, new SelectList(Enum.GetValues(typeof(Vinay.Time.Web.Models.EmployeeWeekState))))
             @*@Html.ValidationMessageFor(model => model.Years)*@
         </div>
     </div>
 </div>
 
+<div data-container="work-item-search"></div>
+<div data-container="registration-grid"></div>
+
+@section Scripts{
+
+}

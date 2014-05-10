@@ -12,10 +12,12 @@ namespace Vinay.Time.Web.Models
 
         [Required]
         public string Name { get; set; }
+        
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         [Required]
         public DateTime StartDate { get; set; }
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         [Required]

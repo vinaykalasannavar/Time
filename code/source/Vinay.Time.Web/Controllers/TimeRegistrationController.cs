@@ -89,7 +89,7 @@ namespace Vinay.Time.Web.Controllers
         private IEnumerable<int> YearsList()
         {
             List<int> years = new List<int>();
-            string yearsConfigString = System.Configuration.ConfigurationManager.AppSettings["TimeRegYearRange"];
+            string yearsConfigString = System.Configuration.ConfigurationManager.AppSettings["TimeRegistrationYearRange"];
             if (yearsConfigString != null)
             {
                 var yearsArray = yearsConfigString.Split('-');

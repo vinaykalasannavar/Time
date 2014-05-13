@@ -33,5 +33,7 @@ namespace Vinay.Time.Web.Models
 
         public DbSet<TimeRegistration> TimeRegistrations { get; set; }
 
+        public DbSet<RegisteredHours> RegisteredHours { get; set; }
+
     }
 }

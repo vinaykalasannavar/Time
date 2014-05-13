@@ -20,6 +20,18 @@ namespace Vinay.Time.Web.Controllers
         // GET: /TimeRegistration/
         public ActionResult Index()
         {
+            WeeklyTimeRegistrationViewModel weekTimeRegVM = new WeeklyTimeRegistrationViewModel
+            {
+                EmployeeWeekSelectionVM = GetEmployeeWeekSelection(),
+                WorkItemSearchToolVM = new WorkItemSearchToolViewModel(),
+                TimeRegistrations = new List<TimeRegistration>()
+            };
+
+            return View(weekTimeRegVM);
+        }
+
+        private EmployeeWeekSelectionViewModel GetEmployeeWeekSelection()
+        {
             EmployeeWeekSelectionViewModel weekSelectionVM = new EmployeeWeekSelectionViewModel();
             weekSelectionVM.Employees = db.Employees.ToList();
             weekSelectionVM.CurrentEmployee = GetCurrentEmployee();
@@ -27,8 +39,7 @@ namespace Vinay.Time.Web.Controllers
 
             weekSelectionVM.Years = YearsList();
             weekSelectionVM.Weeks = GetWeeks(weekSelectionVM.Week.Year);
-
-            return View(weekSelectionVM);
+            return weekSelectionVM;
         }
 
         private Employee GetCurrentEmployee()
@@ -54,7 +65,7 @@ namespace Vinay.Time.Web.Controllers
                 .Where(w => w.Year == startOfThisWeek.Year)
                 .Where(w => w.Number == weekNumber)
                 .FirstOrDefault();
-            
+
             if (week == null)
             {
                 week = new Week

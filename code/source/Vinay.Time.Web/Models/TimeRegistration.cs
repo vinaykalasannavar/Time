@@ -21,6 +21,10 @@ namespace Vinay.Time.Web.Models
         [ForeignKey("EmployeeWeek")]
         public int EmployeeWeekId { get; set; }
         public virtual EmployeeWeek EmployeeWeek { get; set; }
+
+        [ForeignKey("RegisteredHours")]
+        public int RegisteredHoursId { get; set; }
+        public virtual RegisteredHours RegisteredHours { get; set; }
         
         public string Notes { get; set; }
     }

@@ -11,10 +11,9 @@ namespace Vinay.Time.Web.Models
         public bool ProjectFilterRequired { get; set; }
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
-        public virtual Project Project { get; set; }
+        public virtual ICollection<Project> Projects { get; set; }
 
-
-        public bool ModuleFilterRequired { get; set; }
+        //public bool ModuleFilterRequired { get; set; }
         [ForeignKey("Module")]
         public int ModuleId { get; set; }
         public virtual Module Module { get; set; }
@@ -25,7 +24,7 @@ namespace Vinay.Time.Web.Models
         public virtual Employee Employee { get; set; }
 
         public bool StateFilterRequired { get; set; }
-        public virtual ProjectState State { get; set; }
+        public virtual WorkItemState State { get; set; }
 
         public bool NumberOrTitleFilterRequired { get; set; }
         public int WorkItemNumberId { get; set; }

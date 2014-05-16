@@ -31,6 +31,10 @@ namespace Vinay.Time.Web
             bundles.Add(new ScriptBundle("~/bundles/vinay.time").Include(
                       "~/Scripts/time/vinay.time.projects.js"));
 
+            bundles.Add(new StyleBundle("~/Content/vinay.time").Include(
+                      "~/Content/time/vinay.time.css"));
+
+
         }
     }
 }

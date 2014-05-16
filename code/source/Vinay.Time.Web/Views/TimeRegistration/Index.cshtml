@@ -7,11 +7,11 @@
 <h2>Time registration</h2>
 
 
-<div class="form-horizontal">
+<div class="time-reg-column employee-week-selection">
     @Html.Partial("_EmployeeWeekSelection", Model.EmployeeWeekSelectionVM)
 </div>
 
-<div data-container="work-item-search">
+<div data-container="time-reg-column work-item-search">
     @Html.Partial("_WorkItemSearchTool", Model.WorkItemSearchToolVM)
 </div>
 <div data-container="registration-grid">

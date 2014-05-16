@@ -242,12 +242,14 @@
     <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Models\WorkItemFinderViewModel.cs" />
     <Compile Include="Models\WorkItemSearchToolViewModel.cs" />
+    <Compile Include="Models\WorkItemState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\time\vinay.time.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

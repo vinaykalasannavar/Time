@@ -2,35 +2,34 @@
 
 
 <div class="form-horizontal">
-    <h4>WorkItemFinderViewModel</h4>
-    <hr />
     @Html.ValidationSummary(true)
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.ProjectFilterRequired, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ProjectFilterRequired)
             @Html.ValidationMessageFor(model => model.ProjectFilterRequired)
         </div>
-    </div>
+    </div>*@
 
     <div class="form-group">
+        @Html.EditorFor(model => model.ProjectFilterRequired)
         @Html.LabelFor(model => model.ProjectId, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ProjectId)
+            @Html.DropDownListFor(model => model.ProjectId, new SelectList(Model.Projects, "Id", "Name", Model.ProjectId), new { @class=Model.ProjectFilterRequired?"": "disabled" })
+            @*@Html.DropDownList("ProjectId", String.Empty)*@
             @Html.ValidationMessageFor(model => model.ProjectId)
         </div>
     </div>
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.ModuleFilterRequired, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ModuleFilterRequired)
             @Html.ValidationMessageFor(model => model.ModuleFilterRequired)
         </div>
-    </div>
+    </div>*@
 
     <div class="form-group">
+        @*@Html.EditorFor(model => model.ModuleFilterRequired)*@
         @Html.LabelFor(model => model.ModuleId, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ModuleId)
@@ -38,15 +37,15 @@
         </div>
     </div>
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.AssignedEmployeeFilterRequired, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.AssignedEmployeeFilterRequired)
             @Html.ValidationMessageFor(model => model.AssignedEmployeeFilterRequired)
         </div>
-    </div>
+    </div>*@
 
     <div class="form-group">
+        @Html.EditorFor(model => model.AssignedEmployeeFilterRequired)
         @Html.LabelFor(model => model.AssignedEmployeeId, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.AssignedEmployeeId)
@@ -54,41 +53,41 @@
         </div>
     </div>
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.StateFilterRequired, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.StateFilterRequired)
             @Html.ValidationMessageFor(model => model.StateFilterRequired)
         </div>
-    </div>
+    </div>*@
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.NumberOrTitleFilterRequired, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.NumberOrTitleFilterRequired)
             @Html.ValidationMessageFor(model => model.NumberOrTitleFilterRequired)
         </div>
-    </div>
+    </div>*@
 
     <div class="form-group">
+        @Html.EditorFor(model => model.NumberOrTitleFilterRequired)
         @Html.LabelFor(model => model.WorkItemNumberId, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.WorkItemNumberId)
-            @Html.ValidationMessageFor(model => model.WorkItemNumberId)
+            @Html.EditorFor(model => model.WorkItemTitle)
+            @*@Html.ValidationMessageFor(model => model.WorkItemNumberId)*@
         </div>
     </div>
 
-    <div class="form-group">
+    @*<div class="form-group">
         @Html.LabelFor(model => model.WorkItemTitle, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.WorkItemTitle)
             @Html.ValidationMessageFor(model => model.WorkItemTitle)
         </div>
-    </div>
+    </div>*@
 
-    <div class="form-group">
+    @*<div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Create" class="btn btn-default" />
         </div>
-    </div>
+    </div>*@
 </div>

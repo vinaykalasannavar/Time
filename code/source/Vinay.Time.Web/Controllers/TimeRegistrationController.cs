@@ -23,7 +23,12 @@ namespace Vinay.Time.Web.Controllers
             WeeklyTimeRegistrationViewModel weekTimeRegVM = new WeeklyTimeRegistrationViewModel
             {
                 EmployeeWeekSelectionVM = GetEmployeeWeekSelection(),
-                WorkItemSearchToolVM = new WorkItemSearchToolViewModel(),
+                WorkItemSearchToolVM = new WorkItemSearchToolViewModel
+                {
+                    OftenRepeatedRegistrationsVM = new OftenRepeatedRegistrationsViewModel(),
+                    RecentRegistrationsVM = new RecentRegistrationsViewModel (),
+                    WorkItemFinderVM = new WorkItemFinderViewModel { Projects = db.Projects.ToList() }
+                },
                 TimeRegistrations = new List<TimeRegistration>()
             };
 
